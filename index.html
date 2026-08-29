@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Modish Formals — Precision in Volume</title>
+
+  <meta name="description" content="Modish Formals — Premium corporate wear, uniforms and industrial garment manufacturing. Made in Abuja, built for Africa.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #11110f;
+      --dark: #181815;
+      --cream: #f3f0e8;
+      --white: #ffffff;
+      --muted: #aaa79d;
+      --line: rgba(255,255,255,.14);
+      --accent: #c7a66a;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 24px 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(10,10,9,.8),
+        transparent
+      );
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      font-size: 13px;
+      color: #ddd;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-button {
+      border: 1px solid rgba(255,255,255,.4);
+      padding: 11px 18px;
+      border-radius: 100px;
+      font-size: 12px;
+      transition: .3s;
+    }
+
+    .nav-button:hover {
+      background: white;
+      color: black;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.88) 0%,
+          rgba(0,0,0,.52) 48%,
+          rgba(0,0,0,.25) 100%
+        ),
+        url("https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=2000&q=90")
+        center/cover;
+    }
+
+    .hero-content {
+      width: min(1180px, 90%);
+      margin: auto;
+      padding-bottom: 100px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(55px, 9vw, 120px);
+      line-height: .88;
+      letter-spacing: -5px;
+      max-width: 900px;
+      margin-bottom: 35px;
+    }
+
+    .hero-description {
+      max-width: 520px;
+      color: #d2d0c9;
+      line-height: 1.7;
+      font-size: 16px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 23px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: var(--cream);
+      color: var(--black);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.4);
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: black;
+    }
+
+    /* STATS */
+
+    .stats {
+      background: var(--cream);
+      color: var(--black);
+      padding: 55px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 30px;
+    }
+
+    .stat-number {
+      font-family: "Manrope";
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -2px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      margin-top: 7px;
+      color: #68655d;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 130px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .section-number {
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .intro h2,
+    .section-title {
+      font-family: "Manrope";
+      font-size: clamp(38px, 5vw, 65px);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-top: 18px;
+    }
+
+    .intro-text {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 15px;
+      padding-top: 10px;
+    }
+
+    /* SECTORS */
+
+    .sectors {
+      background: #151512;
+      padding: 120px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .section-heading p {
+      max-width: 350px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .sector-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 2px;
+    }
+
+    .sector {
+      min-height: 390px;
+      padding: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .sector::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,.9),
+        rgba(0,0,0,.1)
+      );
+    }
+
+    .sector-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .sector span {
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 2px;
+    }
+
+    .sector h3 {
+      font-family: "Manrope";
+      font-size: 30px;
+      margin-top: 8px;
+    }
+
+    .school {
+      background-image: url("https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=85");
+    }
+
+    .corporate {
+      background-image: url("https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=85");
+    }
+
+    .medical {
+      background-image: url("https://images.unsplash.com/photo-1584467735871-9b9a3f2d5b3d?auto=format&fit=crop&w=1200&q=85");
+    }
+
+    .workwear {
+      background-image: url("https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=1200&q=85");
+    }
+
+    /* PROCESS */
+
+    .process {
+      padding: 130px 0;
+      background: var(--cream);
+      color: var(--black);
+    }
+
+    .process-grid {
+      margin-top: 70px;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      border-top: 1px solid #ccc8bb;
+    }
+
+    .process-item {
+      padding: 35px 25px;
+      border-right: 1px solid #ccc8bb;
+      min-height: 220px;
+    }
+
+    .process-item:last-child {
+      border-right: none;
+    }
+
+    .process-number {
+      font-size: 11px;
+      color: #8d7650;
+      letter-spacing: 2px;
+    }
+
+    .process-item h3 {
+      font-family: "Manrope";
+      font-size: 20px;
+      margin: 20px 0 12px;
+    }
+
+    .process-item p {
+      font-size: 13px;
+      color: #6d6a61;
+      line-height: 1.7;
+    }
+
+    /* CTA */
+
+    .cta {
+      padding: 140px 0;
+      text-align: center;
+      background:
+        linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+        url("https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=2000&q=90")
+        center/cover;
+    }
+
+    .cta h2 {
+      font-family: "Manrope";
+      font-size: clamp(45px,7vw,85px);
+      line-height: .95;
+      letter-spacing: -4px;
+      max-width: 850px;
+      margin: 0 auto 30px;
+    }
+
+    .cta p {
+      color: #ccc;
+      max-width: 500px;
+      margin: 0 auto 35px;
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 55px 0;
+      background: #0d0d0b;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 50px;
+    }
+
+    footer h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      color: var(--accent);
+    }
+
+    footer p,
+    footer a {
+      color: #8e8c84;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .copyright {
+      border-top: 1px solid #252521;
+      margin-top: 50px;
+      padding-top: 25px;
+      color: #66645d;
+      font-size: 11px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 90vh;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .sector-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sector {
+        min-height: 330px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-item {
+        border-right: none;
+        border-bottom: 1px solid #ccc8bb;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="#" class="logo">
+        MODISH<span>.</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#sectors">Solutions</a>
+        <a href="#process">Process</a>
+      </div>
+
+      <a href="#contact" class="nav-button">
+        Request a Quote
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Africa's Premium Uniform & Garment Brand
+      </div>
+
+      <h1>
+        Built to<br>
+        represent.
+      </h1>
+
+      <p class="hero-description">
+        Premium corporate wear, institutional uniforms and
+        industrial garment production — engineered with
+        precision in Abuja and built for the world.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#contact" class="btn btn-primary">
+          Start a Project
+        </a>
+
+        <a href="#sectors" class="btn btn-outline">
+          Explore Our Work
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- STATS -->
+
+  <section class="stats">
+
+    <div class="container stats-grid">
+
+      <div>
+        <div class="stat-number">1,000+</div>
+        <div class="stat-label">Garments per day</div>
+      </div>
+
+      <div>
+        <div class="stat-number">48</div>
+        <div class="stat-label">Industrial machines</div>
+      </div>
+
+      <div>
+        <div class="stat-number">2016</div>
+        <div class="stat-label">Established in Abuja</div>
+      </div>
+
+      <div>
+        <div class="stat-number">14</div>
+        <div class="stat-label">Average turnaround days</div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="intro" id="about">
+
+    <div class="container intro-grid">
+
+      <div>
+
+        <div class="section-number">01 — THE MODISH STANDARD</div>
+
+        <h2>
+          The reliability<br>
+          of a factory.<br>
+          The finish of a tailor.
+        </h2>
+
+      </div>
+
+      <div class="intro-text">
+
+        <p>
+          Modish Formals sits at the intersection of
+          creative design, brand identity and
+          industrial-scale garment production.
+        </p>
+
+        <br>
+
+        <p>
+          From schools and hospitals to corporate
+          organisations and institutions, every garment
+          is produced with one standard in mind:
+          precision.
+        </p>
+
+        <br>
+
+        <p>
+          Made in Nigeria. Designed to represent.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SECTORS -->
+
+  <section class="sectors" id="sectors">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div>
+
+          <div class="section-number">
+            02 — WHAT WE MAKE
+          </div>
+
+          <h2 class="section-title">
+            Four lines.<br>
+            One standard.
+          </h2>
+
+        </div>
+
+        <p>
+          From everyday workwear to
+          institution-specific uniforms,
+          every line is engineered around
+          the requirements of the people
+          who wear it.
+        </p>
+
+      </div>
+
+
+      <div class="sector-grid">
+
+        <div class="sector school">
+
+          <div class="sector-content">
+
+            <span>01 / EDUCATION</span>
+
+            <h3>
+              School Uniforms
+            </h3>
+
+          </div>
+
+        </div>
+
+
+        <div class="sector corporate">
+
+          <div class="sector-content">
+
+            <span>02 / CORPORATE</span>
+
+            <h3>
+              Corporate Wear
+            </h3>
+
+          </div>
+
+        </div>
+
+
+        <div class="sector medical">
+
+          <div class="sector-content">
+
+            <span>03 / MEDICAL</span>
+
+            <h3>
+              Medical Wear
+            </h3>
+
+          </div>
+
+        </div>
+
+
+        <div class="sector workwear">
+
+          <div class="sector-content">
+
+            <span>04 / WORKWEAR</span>
+
+            <h3>
+              Industrial Workwear
+            </h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROCESS -->
+
+  <section class="process" id="process">
+
+    <div class="container">
+
+      <div class="section-number">
+        03 — HOW WE WORK
+      </div>
+
+      <h2 class="section-title">
+        From brief<br>
+        to bulk.
+      </h2>
+
+
+      <div class="process-grid">
+
+        <div class="process-item">
+
+          <div class="process-number">
+            01
+          </div>
+
+          <h3>
+            Brief & Specification
+          </h3>
+
+          <p>
+            We understand your organisation,
+            quantities, fabrics, colours,
+            sizing and branding requirements.
+          </p>
+
+        </div>
+
+
+        <div class="process-item">
+
+          <div class="process-number">
+            02
+          </div>
+
+          <h3>
+            Sample & Approve
+          </h3>
+
+          <p>
+            A pre-production sample is created,
+            reviewed and refined before bulk
+            production begins.
+          </p>
+
+        </div>
+
+
+        <div class="process-item">
+
+          <div class="process-number">
+            03
+          </div>
+
+          <h3>
+            Produce & Deliver
+          </h3>
+
+          <p>
+            Industrial production, quality
+            control and organised delivery —
+            from Abuja across Nigeria and beyond.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="cta" id="contact">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        Your organisation deserves a new look.
+      </div>
+
+      <h2>
+        Let's build what
+        your people wear.
+      </h2>
+
+      <p>
+        Tell us what you need, how many you need,
+        and when you need it. We'll take it from
+        brief to finished garment.
+      </p>
+
+      <div class="buttons" style="justify-content:center;">
+
+        <a href="mailto:hello@modishformals.com"
+           class="btn btn-primary">
+
+          Request a Quote
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <div class="logo">
+            MODISH<span>.</span>
+          </div>
+
+          <p style="margin-top:15px; max-width:350px;">
+            Premium corporate wear and industrial
+            garment manufacturing. Made in Abuja.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>Visit</h4>
+
+          <p>
+            28 Alexandria Crescent<br>
+            Wuse 2, Abuja<br>
+            Nigeria
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>Contact</h4>
+
+          <a href="mailto:hello@modishformals.com">
+            hello@modishformals.com
+          </a>
+
+          <br>
+
+          <a href="tel:+2348037763528">
+            +234 803 776 3528
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        © 2026 Modish Formals — Concept redesign.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</body>
+  </html>
